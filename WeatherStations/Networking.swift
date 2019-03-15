@@ -8,12 +8,16 @@
 
 import Foundation
 
+protocol NetworkingProtocol {
+    func getStationData(completion: @escaping ([Station]?, Error?) -> Void)
+}
+
 struct NetworkingError: Error {
     var code: Int?
     var message: String?
 }
 
-class Networking {
+class Networking: NetworkingProtocol {
     let baseUrl = "https://api.weather.gov/"
     let stations = "stations"
     
@@ -42,7 +46,6 @@ class Networking {
             }
             
             let stations = stationArray.compactMap { json in Station(json: json) }
-            
             completion(stations, nil)
         }
         

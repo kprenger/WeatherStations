@@ -12,11 +12,13 @@
 		3CBF32F7223ACB22009FCE25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CBF32F5223ACB22009FCE25 /* Main.storyboard */; };
 		3CBF32F9223ACB23009FCE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CBF32F8223ACB23009FCE25 /* Assets.xcassets */; };
 		3CBF32FC223ACB23009FCE25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CBF32FA223ACB23009FCE25 /* LaunchScreen.storyboard */; };
-		3CBF3307223ACB23009FCE25 /* WeatherStationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF3306223ACB23009FCE25 /* WeatherStationsTests.swift */; };
 		3CBF3315223ACD2F009FCE25 /* StationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF3314223ACD2F009FCE25 /* StationsTableViewController.swift */; };
 		3CBF3317223ACDBE009FCE25 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF3316223ACDBE009FCE25 /* Networking.swift */; };
 		3CBF3319223AD991009FCE25 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF3318223AD991009FCE25 /* Station.swift */; };
 		3CBF331B223AE230009FCE25 /* StationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF331A223AE230009FCE25 /* StationTest.swift */; };
+		3CBF331D223AF73B009FCE25 /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 3CBF331C223AF73B009FCE25 /* stations.json */; };
+		3CCB77FC223AF7E2008AA65A /* StationsTableViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCB77FB223AF7E2008AA65A /* StationsTableViewControllerTest.swift */; };
+		3CCB77FE223B4841008AA65A /* NetworkingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCB77FD223B4841008AA65A /* NetworkingMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,13 +40,15 @@
 		3CBF32FB223ACB23009FCE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CBF32FD223ACB23009FCE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CBF3302223ACB23009FCE25 /* WeatherStationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherStationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CBF3306223ACB23009FCE25 /* WeatherStationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherStationsTests.swift; sourceTree = "<group>"; };
 		3CBF3308223ACB23009FCE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CBF3311223ACB2F009FCE25 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3CBF3314223ACD2F009FCE25 /* StationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsTableViewController.swift; sourceTree = "<group>"; };
 		3CBF3316223ACDBE009FCE25 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		3CBF3318223AD991009FCE25 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		3CBF331A223AE230009FCE25 /* StationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTest.swift; sourceTree = "<group>"; };
+		3CBF331C223AF73B009FCE25 /* stations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
+		3CCB77FB223AF7E2008AA65A /* StationsTableViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsTableViewControllerTest.swift; sourceTree = "<group>"; };
+		3CCB77FD223B4841008AA65A /* NetworkingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +107,11 @@
 		3CBF3305223ACB23009FCE25 /* WeatherStationsTests */ = {
 			isa = PBXGroup;
 			children = (
-				3CBF3306223ACB23009FCE25 /* WeatherStationsTests.swift */,
+				3CCB77FD223B4841008AA65A /* NetworkingMock.swift */,
+				3CCB77FB223AF7E2008AA65A /* StationsTableViewControllerTest.swift */,
 				3CBF331A223AE230009FCE25 /* StationTest.swift */,
 				3CBF3308223ACB23009FCE25 /* Info.plist */,
+				3CBF331C223AF73B009FCE25 /* stations.json */,
 			);
 			path = WeatherStationsTests;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CBF331D223AF73B009FCE25 /* stations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,8 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CCB77FC223AF7E2008AA65A /* StationsTableViewControllerTest.swift in Sources */,
 				3CBF331B223AE230009FCE25 /* StationTest.swift in Sources */,
-				3CBF3307223ACB23009FCE25 /* WeatherStationsTests.swift in Sources */,
+				3CCB77FE223B4841008AA65A /* NetworkingMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

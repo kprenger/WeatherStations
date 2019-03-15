@@ -11,31 +11,31 @@ import XCTest
 
 class StationTest: XCTestCase {
 
-    func testStationInitWithProperData() {
-        let testJSON: [String: Any] = [
-            "id": "https://api.weather.gov/stations/KRXE",
-            "type": "Feature",
-            "geometry": [
-                "type": "Point",
-                "coordinates": [
+    let goodJson: [String: Any] = [
+        "id": "https://api.weather.gov/stations/KRXE",
+        "type": "Feature",
+        "geometry": [
+            "type": "Point",
+            "coordinates": [
                 -111.80611,
                 43.83167
-                ]
-            ],
-            "properties": [
-                "@id": "https://api.weather.gov/stations/KRXE",
-                "@type": "wx:ObservationStation",
-                "elevation": [
-                    "value": 1481.0232,
-                    "unitCode": "unit:m"
-                ],
-                "stationIdentifier": "KRXE",
-                "name": "Rexburg, Rexburg-Madison County Airport",
-                "timeZone": "America/Boise"
             ]
+        ],
+        "properties": [
+            "@id": "https://api.weather.gov/stations/KRXE",
+            "@type": "wx:ObservationStation",
+            "elevation": [
+                "value": 1481.0232,
+                "unitCode": "unit:m"
+            ],
+            "stationIdentifier": "KRXE",
+            "name": "Rexburg, Rexburg-Madison County Airport",
+            "timeZone": "America/Boise"
         ]
-        
-        let station = Station(json: testJSON)
+    ]
+    
+    func test_Station_InitWithProperData() {
+        let station = Station(json: goodJson)
         
         XCTAssertNotNil(station)
         XCTAssertEqual(station?.abbreviation, "KRXE")
@@ -46,13 +46,13 @@ class StationTest: XCTestCase {
         XCTAssertEqual(station?.timezone, "America/Boise")
     }
     
-    func testStationReturnsNilWithBadData() {
-        let badJSON: [String: Any] = ["id": 2345, "name": true]
-        let station = Station(json: badJSON)
+    func test_Station_InitReturnsNilWithBadData() {
+        let badJson: [String: Any] = ["id": 2345, "name": true]
+        let station = Station(json: badJson)
         XCTAssertNil(station)
     }
     
-    func testCoordinatesInitWithProperData() {
+    func test_Coordinates_InitWithProperData() {
         [(123.456, 987.654),
          (-123.456, 987.654),
          (123.456, -987.654),
@@ -64,7 +64,7 @@ class StationTest: XCTestCase {
         }
     }
     
-    func testCoordinatesReturnsNilWithBadData() {
+    func test_Coordinates_InitReturnsNilWithBadData() {
         [[],
          [1.0],
          [1.0, -2.0, 3.0]].forEach { coordArray in

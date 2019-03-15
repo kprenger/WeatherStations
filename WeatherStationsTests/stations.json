@@ -1,0 +1,241 @@
+{
+    "@context": [
+        "https://raw.githubusercontent.com/geojson/geojson-ld/master/contexts/geojson-base.jsonld",
+        {}
+    ],
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "https://api.weather.gov/stations/KPHX",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.003465,
+                    33.427799
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KPHX",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 339.85200000000003,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KPHX",
+                "name": "Phoenix, Phoenix Sky Harbor International Airport",
+                "timeZone": "America/Phoenix"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KSFO",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.36558,
+                    37.61961
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KSFO",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 3.048,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KSFO",
+                "name": "San Francisco, San Francisco International Airport",
+                "timeZone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KBOI",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.24053,
+                    43.56704
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KBOI",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 860.1456000000001,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KBOI",
+                "name": "Boise Air Terminal",
+                "timeZone": "America/Boise"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KDDC",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -99.96972,
+                    37.77278
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KDDC",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 790.0416,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KDDC",
+                "name": "Dodge City, Dodge City Regional Airport",
+                "timeZone": "America/Chicago"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KSLC",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.96503,
+                    40.77069
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KSLC",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 1288.0848,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KSLC",
+                "name": "Salt Lake City, Salt Lake City International Airport",
+                "timeZone": "America/Denver"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KDEN",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -104.65622,
+                    39.84658
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KDEN",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 1647.1392,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KDEN",
+                "name": "Denver, Denver International Airport",
+                "timeZone": "America/Denver"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KGTF",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.38222,
+                    47.47333
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KGTF",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 1120.14,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KGTF",
+                "name": "Great Falls, Great Falls International Airport",
+                "timeZone": "America/Denver"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KMFR",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.87696,
+                    42.37503
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KMFR",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 399.8976,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KMFR",
+                "name": "Rogue Valley International Airport",
+                "timeZone": "America/Los_Angeles"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KABQ",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -106.61472,
+                    35.04167
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KABQ",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 1630.9848000000002,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KABQ",
+                "name": "Albuquerque, Albuquerque International Airport",
+                "timeZone": "America/Denver"
+            }
+        },
+        {
+            "id": "https://api.weather.gov/stations/KLAX",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.38889,
+                    33.93806
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/stations/KLAX",
+                "@type": "wx:ObservationStation",
+                "elevation": {
+                    "value": 38.1,
+                    "unitCode": "unit:m"
+                },
+                "stationIdentifier": "KLAX",
+                "name": "Los Angeles, Los Angeles International Airport",
+                "timeZone": "America/Los_Angeles"
+            }
+        }
+    ],
+    "observationStations": [
+        "https://api.weather.gov/stations/KPHX",
+        "https://api.weather.gov/stations/KSFO",
+        "https://api.weather.gov/stations/KBOI",
+        "https://api.weather.gov/stations/KDDC",
+        "https://api.weather.gov/stations/KSLC",
+        "https://api.weather.gov/stations/KDEN",
+        "https://api.weather.gov/stations/KGTF",
+        "https://api.weather.gov/stations/KMFR",
+        "https://api.weather.gov/stations/KABQ",
+        "https://api.weather.gov/stations/KLAX"
+    ]
+}

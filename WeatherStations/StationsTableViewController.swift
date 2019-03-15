@@ -14,15 +14,24 @@ class StationsTableViewController: UITableViewController {
     let stationCellId = "stationCell"
     
     var isFetchingStationData = true
+    var networking: NetworkingProtocol!
     var stations: [Station] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchStationData()
+        
+        if (networking == nil) {
+            networking = Networking()
+        }
     }
     
-    func fetchStationData() {
-        Networking().getStationData { [weak self] (data, error) in
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchStationData()
+    }
+
+    func fetchStationData(completion: (() -> ())? = nil) {
+        networking.getStationData { [weak self] (data, error) in
             guard let data = data, error == nil, let self = self else { return }
             
             self.stations = data.sorted { a, b in a.name < b.name }
@@ -30,6 +39,7 @@ class StationsTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 self.isFetchingStationData = false
                 self.tableView.reloadData()
+                completion?()
             }
         }
     }
