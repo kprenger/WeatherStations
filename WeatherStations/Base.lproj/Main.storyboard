@@ -97,6 +97,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="e53-zH-vmZ" kind="show" id="8WG-XS-MfS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -109,6 +112,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7f-ya-UVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1127" y="134"/>
+        </scene>
+        <!--Station-->
+        <scene sceneID="dvE-YD-164">
+            <objects>
+                <viewController title="Station" id="e53-zH-vmZ" customClass="StationViewController" customModule="WeatherStations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fCm-AN-Qji">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phoenix, Phoenix Sky Harbor International Airport (KPHX)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AN7-Vx-2MU">
+                                <rect key="frame" x="16" y="64" width="343" height="179"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="179" id="zID-d9-WIk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0.0, 0.0)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBk-5g-Wi1">
+                                <rect key="frame" x="16" y="251" width="343" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="0bC-pe-hAP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yGi-Sb-vIb" firstAttribute="trailing" secondItem="AN7-Vx-2MU" secondAttribute="trailing" constant="16" id="42X-a0-TPH"/>
+                            <constraint firstItem="AN7-Vx-2MU" firstAttribute="leading" secondItem="yGi-Sb-vIb" secondAttribute="leading" constant="16" id="HUj-FU-eGT"/>
+                            <constraint firstItem="AN7-Vx-2MU" firstAttribute="top" secondItem="yGi-Sb-vIb" secondAttribute="top" id="NOF-f1-gpm"/>
+                            <constraint firstItem="OBk-5g-Wi1" firstAttribute="leading" secondItem="yGi-Sb-vIb" secondAttribute="leading" constant="16" id="Ps8-3w-AaS"/>
+                            <constraint firstItem="OBk-5g-Wi1" firstAttribute="top" secondItem="AN7-Vx-2MU" secondAttribute="bottom" constant="8" id="upk-nd-kvR"/>
+                            <constraint firstItem="yGi-Sb-vIb" firstAttribute="trailing" secondItem="OBk-5g-Wi1" secondAttribute="trailing" constant="16" id="vgM-Tr-tAN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yGi-Sb-vIb"/>
+                    </view>
+                    <connections>
+                        <outlet property="coordinatesLabel" destination="OBk-5g-Wi1" id="NbF-zP-VMN"/>
+                        <outlet property="nameLabel" destination="AN7-Vx-2MU" id="ZZ1-WL-WLi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tfS-Qb-00Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936.8" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JbR-On-Ed7">

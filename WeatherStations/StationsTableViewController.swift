@@ -16,6 +16,7 @@ class StationsTableViewController: UITableViewController {
     var isFetchingStationData = true
     var networking: NetworkingProtocol!
     var stations: [Station] = []
+    var selectedStation: Station?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,15 @@ class StationsTableViewController: UITableViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard let stationVC = segue.destination as? StationViewController else { return }
+        
+        stationVC.station = selectedStation
+        selectedStation = nil
+    }
 }
 
 // MARK: - Table view data source
@@ -69,5 +79,15 @@ extension StationsTableViewController {
         cell.textLabel?.text = station.name
         
         return cell
+    }
+}
+
+// MARK: - Table view delegate
+
+extension StationsTableViewController {
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        selectedStation = stations[indexPath.row]
+        
+        return indexPath
     }
 }

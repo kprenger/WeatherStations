@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C3116FE223BE510008C0C4E /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3116FD223BE510008C0C4E /* StationViewController.swift */; };
 		3CBF32F2223ACB22009FCE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF32F1223ACB22009FCE25 /* AppDelegate.swift */; };
 		3CBF32F4223ACB22009FCE25 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF32F3223ACB22009FCE25 /* HomeViewController.swift */; };
 		3CBF32F7223ACB22009FCE25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CBF32F5223ACB22009FCE25 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C3116FD223BE510008C0C4E /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
 		3CBF32EE223ACB22009FCE25 /* WeatherStations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherStations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CBF32F1223ACB22009FCE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CBF32F3223ACB22009FCE25 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				3CBF32F1223ACB22009FCE25 /* AppDelegate.swift */,
 				3CBF32F3223ACB22009FCE25 /* HomeViewController.swift */,
 				3CBF3316223ACDBE009FCE25 /* Networking.swift */,
+				3C3116FD223BE510008C0C4E /* StationViewController.swift */,
 				3CBF3314223ACD2F009FCE25 /* StationsTableViewController.swift */,
 				3CBF3318223AD991009FCE25 /* Station.swift */,
 				3CBF32F5223ACB22009FCE25 /* Main.storyboard */,
@@ -221,6 +224,7 @@
 				3CBF32F4223ACB22009FCE25 /* HomeViewController.swift in Sources */,
 				3CBF3319223AD991009FCE25 /* Station.swift in Sources */,
 				3CBF32F2223ACB22009FCE25 /* AppDelegate.swift in Sources */,
+				3C3116FE223BE510008C0C4E /* StationViewController.swift in Sources */,
 				3CBF3315223ACD2F009FCE25 /* StationsTableViewController.swift in Sources */,
 				3CBF3317223ACDBE009FCE25 /* Networking.swift in Sources */,
 			);

@@ -15,7 +15,7 @@ struct Coordinates {
     init?(coordinateArray: [Double]?) {
         guard let coordinateArray = coordinateArray, coordinateArray.count == 2 else { return nil }
         
-        // The data source uses JSON, which stores coordinates as [lon, lat]
+        // The data source uses GeoJSON, which stores coordinates as [lon, lat]
         self.latitude = coordinateArray[1]
         self.longitude = coordinateArray[0]
     }

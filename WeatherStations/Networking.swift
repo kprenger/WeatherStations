@@ -17,6 +17,8 @@ struct NetworkingError: Error {
     var message: String?
 }
 
+// TODO: To make this testable, create a variable that holds the session. Then, you can mock the URLSession and override the `shared` method to return an object that contains exactly what you want it to do.
+
 class Networking: NetworkingProtocol {
     let baseUrl = "https://api.weather.gov/"
     let stations = "stations"
