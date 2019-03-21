@@ -11,6 +11,7 @@ import UIKit
 class StationsTableViewController: UITableViewController {
     
     let loadingCellId = "loadingCell"
+    let noDataCellId = "noDataCell"
     let stationCellId = "stationCell"
     
     var isFetchingStationData = true
@@ -33,15 +34,17 @@ class StationsTableViewController: UITableViewController {
 
     func fetchStationData(completion: (() -> ())? = nil) {
         networking.getStationData { [weak self] (data, error) in
+            defer {
+                DispatchQueue.main.async {
+                    self?.isFetchingStationData = false
+                    self?.tableView.reloadData()
+                    completion?()
+                }
+            }
+            
             guard let data = data, error == nil, let self = self else { return }
             
             self.stations = data.sorted { a, b in a.name < b.name }
-            
-            DispatchQueue.main.async {
-                self.isFetchingStationData = false
-                self.tableView.reloadData()
-                completion?()
-            }
         }
     }
     
@@ -63,15 +66,25 @@ extension StationsTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return isFetchingStationData ? 1 : stations.count
+        if isFetchingStationData || stations.count == 0 {
+            return 1
+        } else {
+            return stations.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellId = isFetchingStationData ? loadingCellId : stationCellId
+        var cellId = stationCellId
+        
+        if isFetchingStationData {
+            cellId = loadingCellId
+        } else if stations.count == 0 {
+            cellId = noDataCellId
+        }
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId) else { return UITableViewCell() }
         
-        if (isFetchingStationData) {
+        if (isFetchingStationData || stations.count == 0) {
             return cell
         }
         

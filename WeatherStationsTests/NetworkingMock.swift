@@ -11,8 +11,13 @@ import Foundation
 
 class NetworkingMock: NetworkingProtocol {
     var stationsData: [Station]!
+    var shouldError = false
     
     func getStationData(completion: @escaping ([Station]?, Error?) -> Void) {
-        completion(stationsData, nil)
+        if shouldError {
+            completion(nil, NetworkingError(code: 1, message: "Unable to parse response"))
+        } else {
+            completion(stationsData, nil)
+        }
     }
 }

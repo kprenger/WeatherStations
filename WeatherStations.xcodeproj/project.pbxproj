@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C265B4A22435648004B8EE6 /* StationViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C265B4922435648004B8EE6 /* StationViewControllerTest.swift */; };
 		3C3116FE223BE510008C0C4E /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3116FD223BE510008C0C4E /* StationViewController.swift */; };
 		3CBF32F2223ACB22009FCE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF32F1223ACB22009FCE25 /* AppDelegate.swift */; };
 		3CBF32F4223ACB22009FCE25 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBF32F3223ACB22009FCE25 /* HomeViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C265B4922435648004B8EE6 /* StationViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewControllerTest.swift; sourceTree = "<group>"; };
 		3C3116FD223BE510008C0C4E /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
 		3CBF32EE223ACB22009FCE25 /* WeatherStations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherStations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CBF32F1223ACB22009FCE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				3CCB77FD223B4841008AA65A /* NetworkingMock.swift */,
 				3CCB77FB223AF7E2008AA65A /* StationsTableViewControllerTest.swift */,
+				3C265B4922435648004B8EE6 /* StationViewControllerTest.swift */,
 				3CBF331A223AE230009FCE25 /* StationTest.swift */,
 				3CBF3308223ACB23009FCE25 /* Info.plist */,
 				3CBF331C223AF73B009FCE25 /* stations.json */,
@@ -237,6 +240,7 @@
 				3CCB77FC223AF7E2008AA65A /* StationsTableViewControllerTest.swift in Sources */,
 				3CBF331B223AE230009FCE25 /* StationTest.swift in Sources */,
 				3CCB77FE223B4841008AA65A /* NetworkingMock.swift in Sources */,
+				3C265B4A22435648004B8EE6 /* StationViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Coordinates {
+struct Coordinates: Equatable {
     let latitude: Double
     let longitude: Double
     
@@ -19,9 +19,13 @@ struct Coordinates {
         self.latitude = coordinateArray[1]
         self.longitude = coordinateArray[0]
     }
+    
+    static func ==(lhs: Coordinates, rhs: Coordinates) -> Bool {
+        return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
+    }
 }
 
-struct Station {
+struct Station: Equatable {
     let abbreviation: String
     let coordinates: Coordinates
     let dataUrl: URL
@@ -43,5 +47,13 @@ struct Station {
         self.dataUrl = dataUrl
         self.name = name
         self.timezone = timezone
+    }
+    
+    static func == (lhs: Station, rhs: Station) -> Bool {
+        return lhs.abbreviation == rhs.abbreviation &&
+            lhs.coordinates == rhs.coordinates &&
+            lhs.dataUrl == rhs.dataUrl &&
+            lhs.name == rhs.name &&
+            lhs.timezone == rhs.timezone
     }
 }

@@ -17,7 +17,10 @@ class StationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        updateData()
+    }
+    
+    func updateData() {
         guard let station = station else { return }
         
         nameLabel.text = "\(station.name)\n(\(station.abbreviation))"
